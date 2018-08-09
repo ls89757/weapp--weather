@@ -1,0 +1,92 @@
+<view class="page">
+  <view class="currentData">
+    <view>
+      <text id="currentTemperature" style='font-size:28px;padding-top:45rpx;padding-bottom:10rpx;padding-left:45rpx;padding-right:45rpx; color:white;font-weight:bold; display:block;'>{{currentWeatherData.realTimeTemperature}}</text>
+    </view>
+    <view id="currentCity" style='color:white;padding-left:45rpx;font-weight:bold;'>{{currentWeatherData.currentCity}}</view>
+    <view id="currentWeatherDesc" style='font-size:39rpx;padding-left:45rpx;color:white;margin-bottom:85rpx;'>{{currentWeatherData.weatherDesc}}</view>
+    <view id="pm25" style='color:white'>
+      <text>空气指数: {{currentWeatherData.pm25}}</text>
+      <text>|</text>
+      <text>{{currentWeatherData.wind}}</text>
+    </view>
+  </view>
+  <view class="recentDataContainer">
+    <view class="row" id="today" decode='{{true}}'>
+      <text>今天</text>
+      <text>{{originalWeatherData.weatherData[0].weather_data[0].weather}}</text>
+      <text>{{originalWeatherData.weatherData[0].weather_data[0].temperature}}</text>
+    </view>
+    <view class="row" id="tomorrow">
+      <text>明天</text>
+      <text>{{originalWeatherData.weatherData[0].weather_data[1].weather}}</text>
+      <text>{{originalWeatherData.weatherData[0].weather_data[1].temperature}}</text>
+    </view>
+    <view class="row" id="theDayAfterTomorrow">
+      <text>{{originalWeatherData.weatherData[0].weather_data[2].date}}</text>
+      <text>{{originalWeatherData.weatherData[0].weather_data[2].weather}}</text>
+      <text>{{originalWeatherData.weatherData[0].weather_data[2].temperature}}</text>
+    </view>
+    <view class="row" id="3daysLater">
+      <text>{{originalWeatherData.weatherData[0].weather_data[3].date}}</text>
+      <text>{{originalWeatherData.weatherData[0].weather_data[3].weather}}</text>
+      <text>{{originalWeatherData.weatherData[0].weather_data[3].temperature}}</text>
+    </view>
+  </view>
+  <view class="emptyDiv"></view>
+  <view class="attention">
+  <view style='padding-top:20rpx;'>
+   <text style='display:flex;font-size:30rpx; justify-content:center;'>生活小贴士</text>
+   </view>
+    <view class='attentionRow' style='padding-top:30rpx;'>
+      <view class="icon">
+        <image style="width:100rpx;height:100rpx;" src='../../img/cloth.png'></image>
+      </view>
+      <view class="attentionWrapper">
+      <view class="row_main">
+        <text class="row_title">{{originalWeatherData.weatherData[0].index[0].tipt}}</text>
+        <text class="row_zs">{{originalWeatherData.weatherData[0].index[0].zs}}</text>
+        </view>
+        <text class="row_des">{{originalWeatherData.weatherData[0].index[0].des}}</text>
+      </view>
+    </view>
+    <view class='attentionRow' style='padding-top:10rpx;'>
+      <view class="icon">
+        <image style="width:100rpx;height:100rpx;" src='../../img/car.png'></image>
+      </view>
+      <view class="attentionWrapper">
+      <view class="row_main">
+        <text class="row_title">{{originalWeatherData.weatherData[0].index[1].tipt}}</text>
+        <text class="row_zs">{{originalWeatherData.weatherData[0].index[1].zs}}</text>
+        </view>
+        <text class="row_des">{{originalWeatherData.weatherData[0].index[1].des}}</text>
+      </view>
+    </view>
+     <view class='attentionRow' style='padding-top:10rpx;'>
+      <view class="icon">
+        <image style="width:100rpx;height:100rpx;" src='../../img/medicine.png'></image>
+      </view>
+      <view class="attentionWrapper">
+      <view class="row_main">
+        <text class="row_title">{{originalWeatherData.weatherData[0].index[2].tipt}}</text>
+        <text class="row_zs">{{originalWeatherData.weatherData[0].index[2].zs}}</text>
+        </view>
+        <text class="row_des">{{originalWeatherData.weatherData[0].index[2].des}}</text>
+      </view>
+    </view>
+    <view class='attentionRow' style='padding-top:10rpx;'>
+      <view class="icon">
+        <image style="width:80rpx;height:80rpx; padding-left:15rpx;" src='../../img/ball.png'></image>
+      </view>
+      <view class="attentionWrapper">
+      <view class="row_main">
+        <text class="row_title">{{originalWeatherData.weatherData[0].index[3].tipt}}</text>
+        <text class="row_zs">{{originalWeatherData.weatherData[0].index[3].zs}}</text>
+        </view>
+        <text class="row_des">{{originalWeatherData.weatherData[0].index[3].des}}</text>
+      </view>
+    </view>
+  </view>
+  <view style='display:flex; justify-content:center; font-size:22rpx; color:grey;'>
+  数据由百度地图API提供</view>
+</view>

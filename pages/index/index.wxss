@@ -1,0 +1,98 @@
+/**index.wxss**/
+.page
+{
+   background-color: rgb(238, 234, 234);
+}
+.currentData
+
+{
+   height: 400rpx;
+   background-color: rgba(122, 212, 228, 0.836);
+}
+.recentDataContainer
+{
+    display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  color: grey;
+  background-color: white;
+  font-size: 35rpx;
+  /* font-weight: bold; */
+}
+.row
+{  
+  display: flex;
+   margin-top:23rpx;
+   margin-bottom: 46rpx;
+   margin-left: 70rpx;
+   margin-right: 70rpx;
+   justify-content: space-between;
+   border-bottom: 2rpx solid #EEEEEE;
+}
+#today
+{
+  margin-top:46px;
+}
+.attention
+{
+  background-color: white;
+}
+#pm25
+{
+  display: flex;
+  justify-content: space-between;
+  padding-left:100rpx;
+  padding-right: 100rpx;
+}
+.emptyDiv
+{
+  height: 15rpx;
+}
+.attentionRow
+{
+  height:180rpx;
+  padding-top: 50rpx;
+  color: grey;
+  overflow: hidden;
+  border-bottom: solid 2rpx #EEEEEE;
+}
+.icon
+{
+  float: left;
+  margin-top :10rpx;
+  margin-bottom:10rpx; 
+}
+.attentionWrapper
+{
+  float: right;
+  width: 600rpx;
+  padding-right: 30rpx;
+  height:180rpx;
+  /* padding-left: 100rpx; */
+}
+.row_title
+{
+  float: left;
+}
+.row_zs
+{
+  /* margin-right: 350rpx; */
+  float: right;
+  font-weight: bold;
+}
+.row_main
+{
+  height:50rpx;
+}
+.row_des
+{
+  float: left;
+}
+.attentionRow .row_main
+{
+  font-size: 35rpx;
+}
+.attentionRow .row_des
+{
+  font-size: 30rpx;
+}
